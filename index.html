@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Vue.js + noDoubt Slider</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/ndslider.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="nd-slider" class="nds">
+		<div v-repeat="item: items" class="nds-item" v-class="nds-active: $index == showSlider">
+			<div class="nds-titles">
+				<h2 v-text="item.title" class="nds-title"></h2>
+				<span v-text="item.subTitle" class="nds-subtitle"></span>
+			</div>
+			<div class="nds-bgimage" v-style="background-image: 'url('+ item.bgImage + ')'"></div>
+		</div>
+		<span class="nds-prev" v-on="click: prev">&laquo;</span>
+		<span class="nds-next" v-on="click: next">&raquo;</span>
+	</div>
+
+	<script src="js/vue.min.js"></script>
+	<script src="js/vue-ndslider.js"></script>
+</body>
+</html>

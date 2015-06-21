@@ -1,0 +1,90 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body{font-size:100%;}
+/*------------------------------------------------------------------------------
+Style noDoubt Slider + Vue.js
+------------------------------------------------------------------------------*/
+/*---------------------------------
+ND-SLIDER -> nds
+---------------------------------*/
+[class^="nds"],[class*="nds"]{position:absolute;font-family: 'Lato', 'Trebuchet MS', Arial;}
+.nds{	
+	width:100%;
+	height:100%;
+	overflow-y:hidden;
+}
+.nds-item{
+	width:100%;
+	height:100%;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;	
+	opacity:0;
+}
+.nds-active{
+	opacity:1;
+}
+.nds-titles{	
+	color:#fff;
+	z-index:2;
+	word-break: normal;
+	top:50%;
+	left:10%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.nds-title, .nds-subtitle{
+	position:relative;
+	line-height:1em;
+}
+.nds-title{	
+	font-size:50px;
+	font-size:3.12;	
+}
+.nds-subtitle{
+	font-size:30px;
+	font-size:1.86;	
+	font-weight:300;
+	font-style:italic;
+}
+.nds-bgimage{
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat; 
+	background-size:cover;
+	z-index:1;
+}
+.nds-prev,.nds-next{
+	color:#fff;
+	font-size:30px;
+	font-size:1.87em;
+	top:50%;
+	z-index:3;
+	cursor:pointer;
+	width:43px;
+	height:30px;
+	border-radius:50%;
+	text-align:center;
+	padding-bottom:13px;
+	border:1px solid transparent;	
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: border 0.4s;
+	-o-transition: border 0.4s;
+	transition: border 0.4s;
+}
+.nds-prev:hover,.nds-next:hover{	
+	border:1px solid #fff;
+}
+.nds-prev{	
+	left:30px;
+}
+.nds-next{
+	right:30px;	
+}
