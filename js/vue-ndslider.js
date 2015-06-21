@@ -67,10 +67,3 @@ var $ndSlider = new Vue({
 
 	}
 });
-
-// autoload
-//setInterval(function(){
-//	if(!!$ndSlider.autoload){
-//		$ndSlider.autoloadSlider();
-//	}
-//}, $ndSlider.intervalSlider * 1000);
