@@ -60,3 +60,8 @@ Ex. $ndSlider.initSlider(true, 8) // um delay de 8 segundos
 --
 
 ### Quem quiser contribuir a fim de melhorar, otimizar, corrigir ou adaptar, fiquem a vontade!
+
+--
+
+Licença: [MIT](http://opensource.org/licenses/MIT)
+
