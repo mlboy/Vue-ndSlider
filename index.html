@@ -3,24 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Demo: Vue.js + noDoubt Slider</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/ndslider.css">
+	<link rel="stylesheet" href="css/ndslider.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="nd-slider" class="nds">
-		<div v-repeat="item: items" class="nds-item" v-class="nds-active: $index == showSlider">
-			<div class="nds-titles">
-				<h2 v-text="item.title" class="nds-title"></h2>
-				<span v-text="item.subTitle" class="nds-subtitle"></span>
-			</div>
-			<div class="nds-bgimage" v-style="background-image: 'url('+ item.bgImage + ')'"></div>
-		</div>
-		<span class="nds-prev" v-on="click: prev">&laquo;</span>
-		<span class="nds-next" v-on="click: next">&raquo;</span>
-	</div>
+	
+	<div id="nd-slider" class="nds"></div>
 
 	<script src="js/vue.min.js"></script>
-	<script src="js/vue-ndslider.js"></script>
+	<script src="js/vue-ndslider.min.js"></script>
+	<script>
+		$ndSlider.items = [
+			{
+				title : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus.",
+				subTitle: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+				bgImage: "img/img1.jpg"
+			},
+			{
+				title : "mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac.",
+				subTitle: "Morbi ut mi.",
+				bgImage: "img/img2.jpg"
+			},
+			{
+				title : "elementum et, bibendum at, posuere sit amet, nibh",
+				subTitle: "Lorem ipsum dolor sit amet, consectetuer.",
+				bgImage: "img/img3.jpg"
+			}
+		];
+		$ndSlider.initSlider();
+	</script>
 </body>
 </html>
