@@ -66,24 +66,3 @@ var $ndSlider = new Vue({
 	template: '<div v-repeat="item: items" class="nds-item" v-class="nds-active: $index==showSlider"><div class="nds-titles"><h2 v-text="item.title" class="nds-title"></h2><span v-text="item.subTitle" class="nds-subtitle"></span></div><div class="nds-bgimage" style="background-image: url({{item.bgImage}});"></div></div><span class="nds-prev" v-on="click: prev">&laquo;</span><span class="nds-next" v-on="click: next">&raquo;</span>'
 
 });
-
-
-// ---
-
-$ndSlider.items = [{
-				title : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus.",
-				subTitle: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-				bgImage: "img/img1.jpg"
-			},
-			{
-				title : "mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac.",
-				subTitle: "Morbi ut mi.",
-				bgImage: "img/img2.jpg"
-			},
-			{
-				title : "elementum et, bibendum at, posuere sit amet, nibh",
-				subTitle: "Lorem ipsum dolor sit amet, consectetuer.",
-				bgImage: "img/img3.jpg"
-}];
-
-$ndSlider.initSlider(true, 5);
