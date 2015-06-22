@@ -5,32 +5,31 @@ var $ndSlider = new Vue({
 	data: {
 		items: [
 			{
-				title : "Você não irá acreditar",
-				subTitle: "fazemos acontecer",
+				title : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus.",
+				subTitle: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
 				bgImage: "img/img1.jpg"
 			},
 			{
-				title : "Você não irá acreditar 2",
-				subTitle: "fazemos acontecer 2",
+				title : "mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac.",
+				subTitle: "Morbi ut mi.",
 				bgImage: "img/img2.jpg"
 			},
 			{
-				title : "Você não irá acreditar 3",
-				subTitle: "fazemos acontecer 3",
+				title : "elementum et, bibendum at, posuere sit amet, nibh",
+				subTitle: "Lorem ipsum dolor sit amet, consectetuer.",
 				bgImage: "img/img3.jpg"
 			}
 		],
 		showSlider : 0,
 		limitSlider : '',
-		delay : 5,
-		autoload: true
+		delay : 10,
+		autoload : false,
+		varInterval : ''
 	},
 
 	ready: function(){
 		this.transitionSlider();
-		if(!!this.autoload){	
-			setInterval(this.autoloadSlider, this.delay * 1000);	
-		}
+		this.interval();
 	},
 
 	methods: {
@@ -46,14 +45,21 @@ var $ndSlider = new Vue({
 				return;
 			}
 			++this.showSlider;	
-			console.log(this.showSlider);				
+		},
+
+		interval : function(){
+			if(this.autoload){	
+				this.varInterval = setInterval(this.autoloadSlider, this.delay * 1000);
+			}
 		},
 
 		prev : function(){
 			if(this.showSlider == 0){
-				this.showSlider = this.limitSlider;
+				this.showSlider = this.limitSlider;				
 				return;
-			}
+			}			
+			clearInterval(this.varInterval);
+			this.interval();
 			--this.showSlider;
 		},
 
@@ -62,6 +68,8 @@ var $ndSlider = new Vue({
 				this.showSlider = 0;
 				return;
 			}
+			clearInterval(this.varInterval);
+			this.interval();
 			++this.showSlider;
 		}
 
