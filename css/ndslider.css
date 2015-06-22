@@ -29,9 +29,9 @@ ND-SLIDER -> nds
 .nds-titles{	
 	color:#fff;
 	z-index:2;
-	word-break: normal;
 	top:50%;
 	left:10%;
+	width:40%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
