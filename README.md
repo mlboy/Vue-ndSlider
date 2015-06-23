@@ -8,6 +8,10 @@ Full Slider utilizando o Vue.js + CSS3
 - ndslider.min.css
 - vue.ndslider.min.js
 
+```
+<div id="nd-slider" class="nds"></div>
+```
+
 --
 
 ### Logo após basta alimentar o slide
